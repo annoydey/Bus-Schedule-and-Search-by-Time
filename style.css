@@ -1,0 +1,7 @@
+body{
+    overflow-x: hidden;
+}
+.search {
+    width: 400px;
+    left: auto;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UB Bus Schedule</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css" rel="stylesheet" />
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="search mt-3 mb-3 offset-sm-1 offset-lg-5">
+        <input type="text" id="myInput" onkeyup="myFunction()" class="form-control mr-sm-2" type="text"
+            placeholder="Search by Time" aria-label="Search" title="Type in a name">
+    </div>
+
+    <div class="row">
+        <div class="col-xl-12 col-sm-12 col-12 mb-4">
+            <div class="card">
+                <div class="card-body offset-3 offset-lg-5">
+                    <h3>Location</h3>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="0"/>
+                        <label class="form-check-label" for="flexRadioDefault1"> Creekside Village </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="1"/>
+                        <label class="form-check-label" for="flexRadioDefault1"> Moody Terrace </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="2"/>
+                        <label class="form-check-label" for="flexRadioDefault1"> South Lake Village </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="3"/>
+                        <label class="form-check-label" for="flexRadioDefault1"> Alumni/Stadium </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="4"/>
+                        <label class="form-check-label" for="flexRadioDefault1"> Center For The Arts </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="5"/>
+                        <label class="form-check-label" for="flexRadioDefault1"> Lockwood </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="6"/>
+                        <label class="form-check-label" for="flexRadioDefault1"> O'Brian </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="7"/>
+                        <label class="form-check-label" for="flexRadioDefault1"> Cooke/Hochstetter </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="8"/>
+                        <label class="form-check-label" for="flexRadioDefault1"> NSC </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="9"/>
+                        <label class="form-check-label" for="flexRadioDefault1"> Flickinger Court </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="10"/>
+                        <label class="form-check-label" for="flexRadioDefault1"> Hadley Village </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="11"/>
+                        <label class="form-check-label" for="flexRadioDefault1"> Computing Center </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="12"/>
+                        <label class="form-check-label" for="flexRadioDefault1"> Lower Capen </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="13"/>
+                        <label class="form-check-label" for="flexRadioDefault1"> SU </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="14"/>
+                        <label class="form-check-label" for="flexRadioDefault1"> Lockwood </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="15"/>
+                        <label class="form-check-label" for="flexRadioDefault1"> Alumni/Stadium </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="16"/>
+                        <label class="form-check-label" for="flexRadioDefault1"> South Lake Village </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="17"/>
+                        <label class="form-check-label" for="flexRadioDefault1"> Greiner </label>
+                    </div>
+                    <button class="btn btn-primary mt-3" id="submit">Submit</button>
+                    <button class="btn btn-primary mt-3" onclick="fieldReset()" id="reset">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header text-center py-3">
+            <h5 class="mb-0 text-center">
+                <strong>UB North Campus Weekdays Bus Schedule</strong>
+            </h5>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table id="myTable" class="table table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                            <th scope="col">Creekside Village</th>
+                            <th scope="col">Moody Terrace</th>
+                            <th scope="col">South Lake Village</th>
+                            <th scope="col">Alumni/Stadium</th>
+                            <th scope="col">Center For The Arts</th>
+                            <th scope="col">Lockwood</th>
+                            <th scope="col">O'Brian</th>
+                            <th scope="col">Cooke/Hochstetter</th>
+                            <th scope="col">NSC</th>
+                            <th scope="col">Flickinger Court</th>
+                            <th scope="col">Hadley Village</th>
+                            <th scope="col">Computing Center</th>
+                            <th scope="col">Lower Capen</th>
+                            <th scope="col">SU</th>
+                            <th scope="col">Lockwood</th>
+                            <th scope="col">Alumni/Stadium</th>
+                            <th scope="col">South Lake Village</th>
+                            <th scope="col">Greiner</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data">
+                        <tr>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                            <td>00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- =========== Scripts =========  -->
+    <script src="loaddata.js"></script>
+</body>
+
+</html>
